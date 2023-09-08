@@ -6,12 +6,12 @@ const SliderButton = ({
 }: {
   onClick: () => void;
   araiLabel: string;
-  children: string;
+  children: ChildrenType;
   additionalClass?: string
-}): any => {
+}): JSX.Element => {
   return (
     <button
-      className={`${additionalClass} absolute bottom-0 left-0 top-0 z-10 flex w-1/6 items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none`}
+      className={`absolute bottom-0 ${additionalClass} top-0 z-10 flex w-1/6 items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none`}
       onClick={onClick}
       aria-label={araiLabel}
     >
