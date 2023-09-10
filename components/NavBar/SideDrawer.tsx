@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import { useState } from "react";
 
 function SideDrawer(): React.JSX.Element {
@@ -32,12 +33,12 @@ function SideDrawer(): React.JSX.Element {
         <nav>
           <ul className="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
             <li>
-              <a
+              <Link
                 className="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
                 href="#"
               >
                 Documentation
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

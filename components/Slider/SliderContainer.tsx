@@ -4,6 +4,7 @@ import SliderButton from "./SliderButton";
 import BackArrow from "@/assets/icons/backarrow.svg";
 import ForwardArrow from "@/assets/icons/forwardarrow.svg";
 import Image from "next/image";
+import SliderList from "./sliderList";
 
 const SliderContainer = ({
   slides,
@@ -30,23 +31,7 @@ const SliderContainer = ({
 
   return (
     <>
-      <div className="w-full overflow-hidden">
-        {slides.map((slide, index) => {
-          return (
-            <div
-              key={index}
-              className={`${currentSlide === index ? "block" : "hidden"
-                } transition delay-150 float-left w-full duration-600 ease-in-out`}
-            >
-              <img src={slide.imageUrl} className="  block w-full" alt="imageUrl" />
-              <div className="absolute inset-x-0 bottom-5 py-5 text-center text-white">
-                <h5 className="text-xl">{slide.label}</h5>
-                <p>{slide.content}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <SliderList currentSlide={currentSlide} slides={slides} />
       <SliderButton
         onClick={prevSlide}
         araiLabel="Previous Slide"
