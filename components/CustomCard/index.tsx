@@ -1,22 +1,21 @@
-import React from "react";
+import PlaceholderImage from "@/assets/images/placeholder.jpg"
+import Link from "next/link";
 
 const CustomCard = ({
-  imageUrl,
-  title,
-  description,
-  subTitle,
-  id,
+  shipId,
+  image,
+  shipName,
+  homePort,
 }: {
-  id: string;
-  imageUrl: string;
-  title: string;
-  subTitle: string;
-  description: string;
+  shipId: string;
+  image: string;
+  shipName: string;
+  homePort: string;
 }): React.JSX.Element => {
   return (
     <div className="w-full max-w-full mb-8 sm:w-1/2 px-4 lg:w-1/3 flex flex-col">
       <img
-        src={imageUrl}
+        src={image ?? PlaceholderImage.src}
         alt="Card img"
         className="object-cover object-center w-full h-48"
       />
@@ -24,27 +23,27 @@ const CustomCard = ({
         <div className="triangle"></div>
         <div className="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400">
           <div>
-            <a
-              href={`${id}`}
+            <Link
+              href={`${shipId}`}
               className="inline-block mb-4 text-xs font-bold capitalize border-b-2 border-blue-600 hover:text-blue-600"
             >
-              {title}
-            </a>
-            <a
-              href={`${id}`}
+              {shipName}
+            </Link>
+            <Link
+              href={`${shipId}`}
               className="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600"
             >
-              {subTitle}
-            </a>
-            <p className="mb-4">{description}</p>
+              {homePort}
+            </Link>
+            {/* <p className="mb-4">{description}</p> */}
           </div>
           <div>
-            <a
-              href={`${id}`}
+            <Link
+              href={`${shipId}`}
               className="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600"
             >
               Read More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

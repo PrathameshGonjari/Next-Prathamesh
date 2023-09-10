@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function HomeDashboardFooter(): React.JSX.Element {
@@ -9,52 +10,52 @@ function HomeDashboardFooter(): React.JSX.Element {
             <h5 className="text-xl font-bold mb-6">Features</h5>
             <ul className="list-none ">
               <li className="mb-2">
-                <a
+                <Link
                   href="#"
                   className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                 >
                   Cool stuff
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
+                <Link
                   href="#"
                   className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                 >
                   Random feature
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
+                <Link
                   href="#"
                   className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                 >
                   Team feature
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
+                <Link
                   href="#"
                   className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                 >
                   Stuff for developers
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
+                <Link
                   href="#"
                   className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                 >
                   Another one
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
+                <Link
                   href="#"
                   className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                 >
                   Last time
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -63,24 +64,24 @@ function HomeDashboardFooter(): React.JSX.Element {
               Stay connected
             </h5>
             <div className="flex sm:justify-center xl:justify-start">
-              <a
+              <Link
                 href=""
                 className="w-8 h-8 border-2 border-gray-400 rounded-full text-center py-1 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-blue-600"
               >
                 <i className="fab fa-facebook"></i>
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="w-8 h-8 border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"
               >
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="w-8 h-8 border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-red-600 hover:border-red-600"
               >
                 <i className="fab fa-google-plus-g"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

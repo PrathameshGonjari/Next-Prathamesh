@@ -1,5 +1,5 @@
 declare interface SlidesType {
-  imageUrl: string;
-  label: string;
-  content: string;
+  name: string;
+  description: string;
+  flickr_images: string[];
 }
