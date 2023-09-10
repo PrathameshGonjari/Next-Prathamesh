@@ -17,7 +17,10 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}><NavBar />{children}</body>
+      <body className={inter.className}>
+        <NavBar />
+        <div className="container mx-auto mt-16">{children}</div>
+      </body>
     </html>
   );
 }

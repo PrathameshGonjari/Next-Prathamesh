@@ -1,5 +1,5 @@
-import CustomCard from "@/components/CustomCard";
 import Link from "next/link";
+import ShipList from "../ShipList";
 
 export default function Section({
   ships,
@@ -19,26 +19,7 @@ export default function Section({
           Go to insights
         </Link>
       </div>
-      <div className="flex flex-wrap -mx-4">
-        {ships?.map(
-          ({
-            shipId,
-            image,
-            shipName,
-            homePort,
-          }: RefinedShipDataType): JSX.Element => {
-            return (
-              <CustomCard
-                key={shipId}
-                shipId={shipId}
-                image={image}
-                shipName={shipName}
-                homePort={homePort}
-              />
-            );
-          }
-        )}
-      </div>
+      <ShipList ships={ships} />
     </section>
   );
 }
