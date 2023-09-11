@@ -13,3 +13,13 @@ declare interface RefinedShipDataType {
   shipName: string;
   homePort: string;
 }
+
+declare interface FilterType {
+  limit: string;
+  offset: string;
+  shipId?: string;
+}
+
+declare interface AppReducerState {
+  filterappreducer: FilterType;
+}

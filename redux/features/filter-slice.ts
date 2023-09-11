@@ -1,22 +1,16 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-declare interface FilterState {
-  search: string;
-  limit: string;
-  offset: string;
-}
-
-const initialState: FilterState = {
-  search: "",
-  limit: "",
+const initialState: FilterType = {
+  limit: "6",
   offset: "",
+  shipId: "",
 };
 
-const handleResetFilter = (): FilterState => initialState;
+const handleResetFilter = (): FilterType => initialState;
 const handleUpdateFilter = (
-  state: FilterState,
-  action: PayloadAction<FilterState>
-): FilterState => {
+  state: FilterType,
+  action: PayloadAction<FilterType>
+): FilterType => {
   const updateFilterState = action.payload;
   return { ...state, ...updateFilterState };
 };
