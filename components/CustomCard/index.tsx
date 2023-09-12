@@ -1,4 +1,4 @@
-import PlaceholderImage from "@/assets/images/placeholder.jpg"
+import PlaceholderImage from "@/assets/images/placeholder.jpg";
 import Link from "next/link";
 
 const CustomCard = ({
