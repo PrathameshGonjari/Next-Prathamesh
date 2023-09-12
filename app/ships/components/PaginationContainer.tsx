@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 
 function ShipListContainer(): React.JSX.Element {
 
-  const { search, limit, offset } = useAppSelector((state) => state.filterappreducer);
+  const { limit, offset } = useAppSelector((state) => state.filterappreducer);
 
   const dispatch = useDispatch();
 
@@ -23,7 +23,6 @@ function ShipListContainer(): React.JSX.Element {
     }
 
     const updatedFilter = {
-      search,
       limit,
       offset: updatedOffset.toString(),
     };

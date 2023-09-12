@@ -1,3 +1,5 @@
+import EmptySlider from "./EmptySlider";
+
 function SliderList({
   slides,
   currentSlide,
@@ -5,6 +7,11 @@ function SliderList({
   slides: SlidesType[];
   currentSlide: number;
 }): React.JSX.Element {
+
+  if (!Array.isArray(slides)) {
+    return <EmptySlider />;
+  }
+
   return (
     <div className="w-full overflow-hidden">
       {slides?.map((slide, index) => {

@@ -3,7 +3,6 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 const initialState: FilterType = {
   limit: "6",
   offset: "",
-  shipId: "",
 };
 
 const handleResetFilter = (): FilterType => initialState;

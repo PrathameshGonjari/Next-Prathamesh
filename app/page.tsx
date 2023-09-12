@@ -6,8 +6,12 @@ import { getRefinedShipData } from "./helper";
 
 async function getSlide(): Promise<unknown> {
   try {
-    const slides = await services.get("/dragons");
-    return slides;
+    const { data, success } = (await services.get("/dragons")) as {
+      data: SlidesType[];
+      success: boolean;
+    };
+    if (success) return data;
+    return [];
   } catch (err) {
     console.error(err);
   }

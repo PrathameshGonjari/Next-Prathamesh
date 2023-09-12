@@ -31,7 +31,7 @@ const SliderContainer = ({
 
   return (
     <>
-      <SliderList currentSlide={currentSlide} slides={slides} />
+      <SliderList currentSlide={currentSlide} slides={slides ?? []} />
       <SliderButton
         onClick={prevSlide}
         araiLabel="Previous Slide"

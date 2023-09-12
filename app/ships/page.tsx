@@ -1,12 +1,13 @@
 "use client";
+import Loader from "@/components/Loader";
+import { getShips } from "@/lib/getShip";
 import { useAppSelector } from "@/redux/store";
 import { useEffect, useState } from "react";
 import ShipList from "../components/ShipList";
 import { getRefinedShipData } from "../helper";
 import PaginationContainer from "./components/PaginationContainer";
-import { getShips, initialShipData } from "./helper";
+import { initialShipData } from "./helper";
 import "./style.css";
-import Loader from "@/components/Loader";
 
 function ShipsPage(): JSX.Element {
   const [shipData, setShipData] =
