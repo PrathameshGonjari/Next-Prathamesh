@@ -24,13 +24,13 @@ const CustomCard = ({
         <div className="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400">
           <div>
             <Link
-              href={`${shipId}`}
+              href={`ships/${shipId}`}
               className="inline-block mb-4 text-xs font-bold capitalize border-b-2 border-blue-600 hover:text-blue-600"
             >
               {shipName}
             </Link>
             <Link
-              href={`${shipId}`}
+              href={`ships/${shipId}`}
               className="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600"
             >
               {homePort}
@@ -39,7 +39,7 @@ const CustomCard = ({
           </div>
           <div>
             <Link
-              href={`${shipId}`}
+              href={`ships/${shipId}`}
               className="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600"
             >
               Read More
