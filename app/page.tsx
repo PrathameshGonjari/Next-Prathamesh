@@ -6,8 +6,12 @@ import { getRefinedShipData } from "./helper";
 
 async function getSlide(): Promise<unknown> {
   try {
-    const slides = await services.get("/dragons");
-    return slides;
+    const { data, success } = (await services.get("/dragons")) as {
+      data: SlidesType[];
+      success: boolean;
+    };
+    if (success) return data;
+    return [];
   } catch (err) {
     console.error(err);
   }
@@ -15,8 +19,12 @@ async function getSlide(): Promise<unknown> {
 
 async function getShips(): Promise<unknown> {
   try {
-    const ships = await services.get("/ships?limit=6");
-    return ships;
+    const { data, success } = (await services.get("/ships?limit=6")) as {
+      data: ShipDataType[];
+      success: boolean;
+    };
+    if (success) return data;
+    return [];
   } catch (err) {
     console.error(err);
   }

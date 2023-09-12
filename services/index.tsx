@@ -16,13 +16,20 @@ class Services {
       ...defaultOptions,
       params,
     };
+
     try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL as string}${url}`,
         fetchOptions
       );
+      if (res.status !== 200) {
+        throw new Error(Message.DEFAULT);
+      }
       const data = await res.json();
-      return data;
+      return {
+        data,
+        success: true,
+      };
     } catch (error) {
       throw new Error(Message.DEFAULT);
     }

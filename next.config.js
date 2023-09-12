@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/:shipId*.html", // Old url with .html
+        destination: "/:shipId*", // Redirect without .html
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
